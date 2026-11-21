@@ -1,0 +1,106 @@
+{
+    "personal": {
+        "fullName": "Rasal Hossain",
+        "jobTitle": "Software Developer | MERN Stack & Android Developer",
+        "email": "rasal.hossain.dev@gmail.com",
+        "phone": "+8801 9345-4432",
+        "location": "Noakhali, Bangladesh",
+        "portfolio": "https://adibrasel.github.io/RasalHossain",
+        "linkedin": "https://www.linkedin.com/in/raselhossainadib",
+        "github": "https://github.com/AdibRasel"
+    },
+    "summary": "Software Developer with 4+ years of development experience, specializing in full-stack web development, backend engineering, and Android application development. Experienced in building responsive web applications using the MERN stack, developing mobile applications, designing RESTful APIs, and managing databases. Skilled in React, Next.js, JavaScript, TypeScript, Go, PostgreSQL, MongoDB, Flutter, and modern development tools. Passionate about creating scalable software solutions, solving real-world problems, and delivering reliable, user-focused digital products.",
+    "experience": [
+        {
+            "position": "Junior Web Developer (MERN Stack & Android Development)",
+            "company": "iZoom Limited",
+            "location": "Dhaka, Bangladesh",
+            "startDate": "February 2022",
+            "endDate": "December 2024",
+            "description": "Worked as a Web Developer specializing in the MERN stack, contributing to the development of modern web applications and responsive user interfaces. Developed frontend features using React and JavaScript, worked with backend technologies and database integration, and built RESTful APIs. Also contributed to Android application development, creating mobile application interfaces and implementing application functionality."
+        }
+    ],
+    "education": [
+        {
+            "qualification": "Higher Secondary Certificate (HSC)",
+            "institution": "Sompara College | Cumilla Board",
+            "startYear": "2018",
+            "endYear": "2020",
+            "group": "Business Studies",
+            "result": "GPA 3.33/5.00"
+        },
+        {
+            "qualification": "Secondary School Certificate (SSC)",
+            "institution": "Shahapur M.L High School | Cumilla Board",
+            "startYear": "2018",
+            "endYear": "2018",
+            "group": "Business Studies",
+            "result": "GPA 3.27/5.00"
+        }
+    ],
+    "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "TypeScript",
+        "React.js",
+        "Next.js",
+        "Bootstrap",
+        "Sass / SCSS",
+        "Go (Golang)",
+        "Gin Framework",
+        "Node.js",
+        "Express.js",
+        "MERN Stack",
+        "RESTful API Development",
+        "JWT Authentication",
+        "Role-Based Access Control",
+        "MVC Architecture",
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL",
+        "SQL",
+        "Database Design",
+        "Flutter",
+        "Dart",
+        "Ionic",
+        "Android Development",
+        "WordPress",
+        "Elementor",
+        "Website Customization",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Linux",
+        "Ubuntu",
+        "Postman",
+        "pgAdmin",
+        "Responsive Web Design",
+        "SEO Optimization",
+        "Performance Optimization",
+        "Debugging",
+        "MS Word",
+        "MS Excel",
+        "PowerPoint",
+        "Data Entry",
+        "Document Processing",
+        "75+ WPM Typing"
+    ],
+    "projects": [],
+    "languages": [
+        {
+            "name": "Bengali",
+            "level": "Native"
+        },
+        {
+            "name": "English",
+            "level": "Intermediate"
+        }
+    ],
+    "certifications": [],
+    "settings": {
+        "template": "professional",
+        "accentColor": "charcoal",
+        "animation": "off"
+    }
+}

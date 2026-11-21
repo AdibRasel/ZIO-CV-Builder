@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>ZIO CV Builder – Free Online CV & Resume Maker</title>
+
+    <meta name="description"
+        content="Create a professional CV online for free with ZIO CV Builder. Choose a beautiful resume template, customize your details and download your CV as PDF. বাংলা ও ইংরেজি CV তৈরি করুন সহজেই।">
+
+    <meta name="author" content="ZiroLogy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#7057e8">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://adibrasel.github.io/RasalHossain">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZIO CV Builder – Free Online CV Maker">
+    <meta property="og:description"
+        content="Build a professional CV for free. Customize your resume, choose a template and download it as PDF with ZIO CV Builder.">
+    <meta property="og:url" content="https://adibrasel.github.io/RasalHossain">
+    <meta property="og:site_name" content="ZIO CV Builder">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://adibrasel.github.io/RasalHossain/assets/images/og-image.png">
+    <meta property="og:image:alt" content="ZIO CV Builder – Free Online Resume Maker">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZIO CV Builder – Free CV Maker">
+    <meta name="twitter:description"
+        content="Create, customize and download your professional CV as PDF for free.">
+    <meta name="twitter:image" content="https://adibrasel.github.io/RasalHossain/assets/images/og-image.png">
+
+    <!-- Web Application Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ZIO CV Builder",
+        "alternateName": "ZIO Resume Builder",
+        "url": "https://adibrasel.github.io/RasalHossain",
+        "description": "A free online CV and resume builder with customizable templates and PDF export.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "inLanguage": ["en", "bn"],
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "ZiroLogy",
+            "url": "https://adibrasel.github.io/RasalHossain"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        referrerpolicy="no-referrer">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+
+
+
+    <!-- APP HEADER -->
+    <header class="app-header">
+        <div class="header-container">
+
+            <a href="#" class="brand-logo" aria-label="ZIO CV Builder Home">
+                <span class="logo-icon">Z</span>
+                <span class="logo-text">ZIO<span>CV</span></span>
+            </a>
+
+            <div class="save-status">
+                <span class="status-indicator"></span>
+                <span id="saveStatus">All changes saved</span>
+            </div>
+
+            <div class="header-actions">
+
+                <div class="mode-switch">
+                    <button class="mode-btn active" id="personalMode">
+                        <i class="fa-solid fa-user"></i>
+                        Personal CV
+                    </button>
+
+                    <button class="mode-btn" id="guestMode">
+                        <i class="fa-solid fa-users"></i>
+                        Guest Mode
+                    </button>
+                </div>
+
+                <button type="button" class="btn btn-outline" id="resetBtn">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Reset
+                </button>
+
+                <button type="button" class="btn btn-outline" id="exportBtn">
+                    <i class="fa-solid fa-file-export"></i>
+                    Export data
+                </button>
+
+                <button type="button" class="btn btn-outline" id="importBtn">
+                    <i class="fa-solid fa-file-import"></i>
+                    Import data
+                </button>
+
+                <input type="file" id="importFile" accept=".json" hidden>
+
+                <button type="button" class="btn btn-primary" id="downloadBtn">
+                    <i class="fa-solid fa-download"></i>
+                    Download PDF
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- MAIN WORKSPACE -->
+    <main class="workspace">
+
+        <div class="workspace-heading">
+
+            <div>
+                <span class="eyebrow">RESUME WORKSPACE</span>
+                <h1>Build your CV</h1>
+                <p>Add your details and create a professional resume.</p>
+            </div>
+
+        </div>
+
+
+        <!-- WORKSPACE GRID -->
+        <div class="workspace-grid">
+
+            <!-- LEFT: EDITOR PANEL -->
+            <section class="editor-panel" aria-label="CV editor">
+
+                <!-- Navigation -->
+                <nav class="section-navigation" aria-label="CV sections">
+
+                    <button class="nav-item active" data-section="personal">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Personal details</span>
+                    </button>
+
+                    <button class="nav-item" data-section="summary">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>Professional summary</span>
+                    </button>
+
+                    <button class="nav-item" data-section="experience">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Work experience</span>
+                    </button>
+
+                    <button class="nav-item" data-section="education">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </button>
+
+                    <button class="nav-item" data-section="skills">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Skills</span>
+                    </button>
+
+                    <button class="nav-item" data-section="projects">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <span>Projects & extras</span>
+                    </button>
+
+                    <button class="nav-item" data-section="languages">
+                        <i class="fa-solid fa-language"></i>
+                        <span>Languages</span>
+                    </button>
+
+                    <button class="nav-item" data-section="certifications">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Certifications & awards</span>
+                    </button>
+
+                </nav>
+
+
+                <!-- Editor Content -->
+                <div class="editor-content">
+
+                    <!-- PERSONAL DETAILS -->
+                    <section class="form-section active" id="personal">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 01</span>
+                            <h2>Personal details</h2>
+                            <p>Introduce yourself to your next employer.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullName">
+                                <i class="fa-regular fa-user"></i> Full name *
+                            </label>
+                            <input type="text" id="fullName" placeholder="e.g. John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="jobTitle">
+                                <i class="fa-solid fa-briefcase"></i> Professional title
+                            </label>
+                            <input type="text" id="jobTitle" placeholder="e.g. Software Developer">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fa-regular fa-envelope"></i> Email address
+                            </label>
+                            <input type="email" id="email" placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fa-solid fa-phone"></i> Phone number
+                            </label>
+                            <input type="tel" id="phone" placeholder="+8801XXXXXXXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">
+                                <i class="fa-solid fa-location-dot"></i> Location
+                            </label>
+                            <input type="text" id="location" placeholder="City, Country">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="website">
+                                <i class="fa-solid fa-globe"></i> Website / Portfolio
+                            </label>
+                            <input type="url" id="website" placeholder="https://example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="linkedin">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn
+                            </label>
+                            <input type="text" id="linkedin" placeholder="linkedin.com/in/username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="github">
+                                <i class="fa-brands fa-github"></i> GitHub
+                            </label>
+                            <input type="text" id="github" placeholder="github.com/username">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileImage">
+                                <i class="fa-regular fa-image"></i> Profile photo
+                            </label>
+                            <input type="file" id="profileImage" accept="image/jpeg,image/png,image/webp">
+                            <small>JPG, PNG or WebP. Used in photo-enabled templates.</small>
+                        </div>
+
+                    </section>
+
+
+                    <!-- PROFESSIONAL SUMMARY -->
+                    <section class="form-section" id="summary">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 02</span>
+                            <h2>Professional summary</h2>
+                            <p>Write a short introduction about yourself.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="summaryText">
+                                <i class="fa-regular fa-file-lines"></i> Professional summary
+                            </label>
+                            <textarea id="summaryText" rows="7"
+                                placeholder="Write a short professional introduction..."></textarea>
+                        </div>
+
+                    </section>
+
+
+                    <!-- WORK EXPERIENCE -->
+                    <section class="form-section" id="experience">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 03</span>
+                            <h2>Work experience</h2>
+                            <p>Highlight your professional experience.</p>
+                        </div>
+
+                        <div id="experienceList">
+
+                            <div class="repeatable-card">
+
+                                <div class="repeatable-header">
+                                    <strong>Experience</strong>
+                                    <button type="button" class="remove-item" aria-label="Remove experience">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-briefcase"></i> Job title</label>
+                                    <input type="text" placeholder="e.g. Software Engineer">
+                                </div>
+
+                                <div class="form-group">
+                                    <label><i class="fa-regular fa-building"></i> Company</label>
+                                    <input type="text" placeholder="Company name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label><i class="fa-solid fa-location-dot"></i> Location</label>
+                                    <input type="text" placeholder="City, Country">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label><i class="fa-regular fa-calendar"></i> Start date</label>
+                                        <input type="text" placeholder="Jan 2023">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label><i class="fa-regular fa-calendar-check"></i> End date</label>
+                                        <input type="text" placeholder="Present">
+                                    </div>
+                                </div>
+
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    I currently work here
+                                </label>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-regular fa-file-lines"></i> Job description
+                                    </label>
+                                    <textarea rows="4"
+                                        placeholder="Describe your responsibilities and achievements..."></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-add" id="addExperience">
+                            <i class="fa-solid fa-plus"></i> Add experience
+                        </button>
+
+                    </section>
+
+
+                    <!-- EDUCATION -->
+                    <section class="form-section" id="education">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 04</span>
+                            <h2>Education</h2>
+                            <p>Add your academic qualifications.</p>
+                        </div>
+
+                        <div id="educationList">
+
+                            <div class="repeatable-card">
+
+                                <div class="repeatable-header">
+                                    <strong>Education</strong>
+                                    <button type="button" class="remove-item" aria-label="Remove education">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-graduation-cap"></i> Degree / Qualification
+                                    </label>
+                                    <input type="text" placeholder="e.g. Bachelor of Science">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-school"></i> Institution
+                                    </label>
+                                    <input type="text" placeholder="Institution name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-location-dot"></i> Location
+                                    </label>
+                                    <input type="text" placeholder="City, Country">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>
+                                            <i class="fa-regular fa-calendar"></i> Start year
+                                        </label>
+                                        <input type="text" placeholder="2020">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <i class="fa-regular fa-calendar-check"></i> End year
+                                        </label>
+                                        <input type="text" placeholder="2024">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-award"></i> Details (optional)
+                                    </label>
+                                    <textarea rows="3" placeholder="GPA, major, achievements..."></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-add" id="addEducation">
+                            <i class="fa-solid fa-plus"></i> Add education
+                        </button>
+
+                    </section>
+
+
+                    <!-- SKILLS -->
+                    <section class="form-section" id="skills">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 05</span>
+                            <h2>Skills</h2>
+                            <p>Showcase your professional abilities.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="skillsText">
+                                <i class="fa-solid fa-code"></i> Your skills
+                            </label>
+                            <textarea id="skillsText" rows="6"
+                                placeholder="JavaScript, React, HTML, CSS, Communication..."></textarea>
+                            <small>Separate each skill with a comma.</small>
+                        </div>
+
+                    </section>
+
+
+                    <!-- PROJECTS & EXTRAS -->
+                    <section class="form-section" id="projects">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 06</span>
+                            <h2>Projects & extras</h2>
+                            <p>Add personal projects and other achievements.</p>
+                        </div>
+
+                        <div id="projectsList">
+
+                            <div class="repeatable-card">
+
+                                <div class="repeatable-header">
+                                    <strong>Project</strong>
+                                    <button type="button" class="remove-item" aria-label="Remove project">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-folder-open"></i> Project name
+                                    </label>
+                                    <input type="text" placeholder="Project name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-link"></i> Project link
+                                    </label>
+                                    <input type="url" placeholder="https://example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-regular fa-file-lines"></i> Description
+                                    </label>
+                                    <textarea rows="4" placeholder="Describe your project..."></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-add" id="addProject">
+                            <i class="fa-solid fa-plus"></i> Add project
+                        </button>
+
+                    </section>
+
+
+                    <!-- LANGUAGES -->
+                    <section class="form-section" id="languages">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 07</span>
+                            <h2>Languages</h2>
+                            <p>List the languages you can communicate in.</p>
+                        </div>
+
+                        <div id="languagesList">
+
+                            <div class="repeatable-card">
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>
+                                            <i class="fa-solid fa-language"></i> Language
+                                        </label>
+                                        <input type="text" placeholder="e.g. Bangla">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <i class="fa-solid fa-chart-simple"></i> Proficiency
+                                        </label>
+                                        <select>
+                                            <option value="">Select level</option>
+                                            <option>Native</option>
+                                            <option>Fluent</option>
+                                            <option>Advanced</option>
+                                            <option>Intermediate</option>
+                                            <option>Basic</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="remove-item" aria-label="Remove language">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-add" id="addLanguage">
+                            <i class="fa-solid fa-plus"></i> Add language
+                        </button>
+
+                    </section>
+
+
+                    <!-- CERTIFICATIONS -->
+                    <section class="form-section" id="certifications">
+
+                        <div class="section-heading">
+                            <span class="section-number">SECTION 08</span>
+                            <h2>Certifications & awards</h2>
+                            <p>Add your professional certifications and achievements.</p>
+                        </div>
+
+                        <div id="certificationsList">
+
+                            <div class="repeatable-card">
+
+                                <div class="repeatable-header">
+                                    <strong>Certification / Award</strong>
+                                    <button type="button" class="remove-item" aria-label="Remove certification">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-solid fa-certificate"></i> Title
+                                    </label>
+                                    <input type="text" placeholder="Certification name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-regular fa-building"></i> Issuing organization
+                                    </label>
+                                    <input type="text" placeholder="Organization name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-regular fa-calendar"></i> Year
+                                    </label>
+                                    <input type="text" placeholder="2025">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        <i class="fa-regular fa-file-lines"></i> Details (optional)
+                                    </label>
+                                    <textarea rows="2" placeholder="Additional details..."></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-add" id="addCertification">
+                            <i class="fa-solid fa-plus"></i> Add certification
+                        </button>
+
+                    </section>
+
+
+                    <!-- EDITOR NAVIGATION -->
+                    <div class="editor-footer">
+
+                        <button type="button" class="btn btn-outline" id="prevSection">
+                            <i class="fa-solid fa-arrow-left"></i> Previous
+                        </button>
+
+                        <button type="button" class="btn btn-primary" id="nextSection">
+                            Next section <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RIGHT: LIVE PREVIEW -->
+            <aside class="preview-panel" aria-label="Live CV preview">
+
+                <div class="preview-header">
+
+                    <div>
+                        <span class="eyebrow">LIVE PREVIEW</span>
+                        <h2>Your resume</h2>
+                    </div>
+
+                    <span class="preview-badge">
+                        <i class="fa-solid fa-eye"></i> Live
+                    </span>
+
+                </div>
+
+
+                <!-- Template Settings -->
+                <div class="preview-settings">
+
+                    <div class="setting-group">
+                        <label for="templateSelect">Template</label>
+                        <select id="templateSelect">
+                            <option value="classic">Classic</option>
+                            <option value="modern">Modern</option>
+                            <option value="minimal">Minimal</option>
+                            <option value="creative">Creative</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="accentColor">Accent color</label>
+                        <select id="accentColor">
+                            <option value="violet">Violet</option>
+                            <option value="teal">Teal</option>
+                            <option value="blue">Blue</option>
+                            <option value="terracotta">Terracotta</option>
+                            <option value="charcoal">Charcoal</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-group">
+                        <label for="animationToggle">Background animation</label>
+                        <select id="animationToggle">
+                            <option value="auto">Template default</option>
+                            <option value="on">On</option>
+                            <option value="off">Off</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- Resume A4 Preview -->
+                <div class="resume-preview-container">
+
+                    <article class="resume-page template-classic" id="resumePreview">
+
+                        <!-- Resume Header -->
+                        <header class="resume-header">
+
+                            <div class="resume-profile-image" id="previewImageWrapper">
+                                <img id="previewImage" src="" alt="Profile photo" hidden>
+                            </div>
+
+                            <div class="resume-heading">
+
+                                <h1 id="previewName">Your Name</h1>
+
+                                <h2 id="previewJobTitle">Professional Title</h2>
+
+                                <div class="resume-contact" id="previewContact">
+                                    <span>Email address</span>
+                                    <span>Phone number</span>
+                                    <span>Location</span>
+                                </div>
+
+                                <div class="resume-links" id="previewLinks"></div>
+
+                            </div>
+
+                        </header>
+
+
+                        <!-- Summary -->
+                        <section class="resume-section" id="previewSummarySection">
+                            <h3>PROFILE</h3>
+                            <p id="previewSummary">
+                                Your professional summary will appear here.
+                            </p>
+                        </section>
+
+
+                        <!-- Experience -->
+                        <section class="resume-section" id="previewExperienceSection">
+                            <h3>EXPERIENCE</h3>
+                            <div id="previewExperience"></div>
+                        </section>
+
+
+                        <!-- Education -->
+                        <section class="resume-section" id="previewEducationSection">
+                            <h3>EDUCATION</h3>
+                            <div id="previewEducation"></div>
+                        </section>
+
+
+                        <!-- Skills -->
+                        <section class="resume-section" id="previewSkillsSection">
+                            <h3>SKILLS</h3>
+                            <div id="previewSkills"></div>
+                        </section>
+
+
+                        <!-- Projects -->
+                        <section class="resume-section" id="previewProjectsSection">
+                            <h3>PROJECTS</h3>
+                            <div id="previewProjects"></div>
+                        </section>
+
+
+                        <!-- Languages -->
+                        <section class="resume-section" id="previewLanguagesSection">
+                            <h3>LANGUAGES</h3>
+                            <div id="previewLanguages"></div>
+                        </section>
+
+
+                        <!-- Certifications -->
+                        <section class="resume-section" id="previewCertificationsSection">
+                            <h3>CERTIFICATIONS & AWARDS</h3>
+                            <div id="previewCertifications"></div>
+                        </section>
+
+                    </article>
+
+                </div>
+
+
+                <div class="preview-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Preview is formatted for A4 paper. Choose "Save as PDF"
+                    in the print dialog.
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+
+        <div class="footer-content">
+
+            <a href="#" class="footer-brand">ZIO <span>CV</span></a>
+
+            <p>Made for your next opportunity.</p>
+
+            <div class="author-info">
+                Created by
+                <a href="https://rasalhossain.com" target="_blank" rel="noopener noreferrer">
+                    Rasal Hossain
+                </a>
+            </div>
+
+            <span>Powered by <strong>ZiroLogy</strong></span>
+
+            <span>© 2026 Rasal Hossain. All rights reserved.</span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/preview.js"></script>
+    <script src="js/export.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
