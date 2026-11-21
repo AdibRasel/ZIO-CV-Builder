@@ -143,7 +143,7 @@ window.CVData = (() => {
     }
 
     async function loadDefaultProfile() {
-        const response = await fetch("../assets/data/profile.json", {
+        const response = await fetch("./assets/data/profile.json", {
             cache: "no-store"
         });
 
