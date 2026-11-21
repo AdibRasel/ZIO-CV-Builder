@@ -1,5 +1,4 @@
-
 User-agent: *
 Allow: /
 
-Sitemap: https://adibrasel.github.io/RasalHossain/sitemap.xml
+Sitemap: https://adibrasel.github.io/ZIO-CV-Builder/sitemap.xml
