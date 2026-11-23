@@ -12,12 +12,28 @@
     "summary": "Software Developer with 4+ years of development experience, specializing in full-stack web development, backend engineering, and Android application development. Experienced in building responsive web applications using the MERN stack, developing mobile applications, designing RESTful APIs, and managing databases. Skilled in React, Next.js, JavaScript, TypeScript, Go, PostgreSQL, MongoDB, Flutter, and modern development tools. Passionate about creating scalable software solutions, solving real-world problems, and delivering reliable, user-focused digital products.",
     "experience": [
         {
-            "position": "Junior Web Developer (MERN Stack & Android Development)",
-            "company": "iZoom Limited",
-            "location": "Dhaka, Bangladesh",
-            "startDate": "February 2022",
-            "endDate": "December 2024",
-            "description": "Worked as a Web Developer specializing in the MERN stack, contributing to the development of modern web applications and responsive user interfaces. Developed frontend features using React and JavaScript, worked with backend technologies and database integration, and built RESTful APIs. Also contributed to Android application development, creating mobile application interfaces and implementing application functionality."
+            "position": "Customer Service Officer (CSO)",
+            "company": "Bank Asia Agent Banking",
+            "location": "Shahapur Bazar, Chatkhil, Noakhali, Bangladesh",
+            "startDate": "February 2024",
+            "endDate": "Present",
+            "description": "Working as a Customer Service Officer at Bank Asia Agent Banking, managing customer accounts and providing banking services. Responsibilities include account creation, cash deposits and withdrawals, customer support, RTGS and EFT transactions, DPS and FDR account management, promoting banking products, resolving customer inquiries, and ensuring accurate and compliant financial transactions."
+        },
+        {
+            "position": "Software Engineer (Intern)",
+            "company": "Urban IT Solution",
+            "location": "Mirpur-10, Dhaka-1216, Bangladesh",
+            "startDate": "September 2023",
+            "endDate": "December 2023",
+            "description": "Completed a four-month internship as a Software Engineer, gaining hands-on experience in software and application development. Worked on developing and maintaining web application features, writing and debugging code, implementing frontend interfaces, integrating application functionality, and troubleshooting technical issues. Collaborated with the development team, followed software development practices, and strengthened practical programming, problem-solving, and application development skills."
+        },
+        {
+            "position": "Customer Service Officer (CSO)",
+            "company": "Bank Asia Agent Banking",
+            "location": "Shahapur Bazar, Chatkhil, Noakhali, Bangladesh",
+            "startDate": "January 2021",
+            "endDate": "August 2023",
+            "description": "Provided customer support and assisted with daily banking operations, including account opening, cash deposits and withdrawals, customer inquiries, and banking transactions. Also supported DPS and FDR account services while maintaining accurate records and ensuring customer satisfaction."
         }
     ],
     "education": [
